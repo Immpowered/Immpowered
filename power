@@ -1,0 +1,43 @@
+#!/bin/bash
+
+while [[ $# == 0 ]]
+do
+    echo ""
+    echo "  Usage: power [command]"
+    echo ""
+    echo "      start       Boots the flask server"
+    echo "      build       Rebuilds react into bundle.js"
+    echo "      test        Runs server and client tests"
+    echo ""
+    break
+done
+
+# Parse argument
+while [[ $# == 1 ]]
+do
+    arg="$1"
+    case $arg in
+        start)
+            python server/app.py
+            shift
+            ;;
+        build)
+            pushd client > /dev/null
+            npm run build
+            shift
+            popd 
+            rm -rf server/build
+            cp -rf client/build server/
+            ;; 
+	test)
+            echo "NOT YET IMPLEMENTED"
+            ;;
+    	*)
+            echo "" 
+            echo "  Argument '$arg' not recognized"
+            ./power
+            shift
+            ;;
+    esac
+    break
+done
