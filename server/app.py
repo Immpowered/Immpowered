@@ -1,9 +1,14 @@
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, send_from_directory
+app = Flask(__name__, static_folder='build')
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World!'
+def index():
+	return render_template(app.static_folder+'/index.html')
+
+@app.route('/<path:filename>')
+def upload(filename):
+	print(filename)
+	return send_from_directory(app.static_folder, filename)
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug=True)
