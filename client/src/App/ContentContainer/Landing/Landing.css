@@ -13,7 +13,7 @@ button.start-button {
 }
 
 #landing {
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-content: center;
     align-items: center;

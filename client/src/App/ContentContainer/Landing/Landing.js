@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
-import welcome from './welcome.svg';
+import welcome from './splash.svg';
 import './Landing.css';
 
 @inject("store")
