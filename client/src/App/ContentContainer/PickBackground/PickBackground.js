@@ -9,9 +9,15 @@ class PickBackground extends Component {
         this.props.store.start()
     }
     render() { 
+        const backgrounds = ['Banking & Finance', 'Engineering', 'Governemnt & Policy', 'Healthcare', 'Education', 'Computer Science', 'Design', 'Journalism', 'Operations', 'Human Resources', 'IT', 'Sales', 'Construction']
         return (
             <div className="pick-background">
-                <button className="start-button" onClick={this.onClick}>start</button>
+                <h2>Your background is</h2>
+                <select>
+                {backgrounds.map(function(name, index){
+                    return <option value = {name}> {name} </option>
+                })}
+                </select>
             </div>
         );
     }

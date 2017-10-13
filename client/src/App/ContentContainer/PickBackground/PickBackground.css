@@ -1,3 +1,25 @@
 .pick-background {
-    flex-direction: row;
+    flex-direction: column;
+    margin-top: 17%;
+}
+
+.pick-background h2{
+	color: white;
+	font: 'Roboto' 30px;
+	font-weight: 100;
+	margin-bottom: 20px;
+}
+
+select {
+    font-size: 16px;
+    border-radius: 0;
+    border: none;
+    background: white;
+    width: 125%;
+    overflow: hidden;
+    padding-top: 15px;
+    height: 45px;
+    text-indent: 10px;
+    color: #;
+    -webkit-appearance: none;
 }
