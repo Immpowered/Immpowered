@@ -7,7 +7,6 @@ import './TopNav.css';
 @observer
 class TopNav extends Component {
   onClick = (event) => {
-    event.target.disable()
     this.props.store.change_language()
   }
   render() {
