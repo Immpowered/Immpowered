@@ -1,6 +1,9 @@
 .pick-background {
+	display: flex;
     flex-direction: column;
     margin-top: 17%;
+    align-items: center;
+    align-content: center;
 }
 
 .pick-background h2{
@@ -11,7 +14,7 @@
 }
 
 .Select-control {
-    width: 120%;
+    width: 240px;
     border-radius: none;
 }
 
@@ -20,7 +23,7 @@
 }
 
 .Select-menu-outer {
-	width: 120%;
+	width: 240px;
 }
 
 .Select-arrow {
