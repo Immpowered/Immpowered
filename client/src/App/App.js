@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { observer } from 'mobx-react';
 
-import Splash from './Splash/Splash';
+import ContentContainer from './ContentContainer/ContentContainer';
 import TopNav from './TopNav/TopNav';
 
 @observer
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <TopNav />
-        <Splash />
+        <ContentContainer />
       </div>
     );
   }
