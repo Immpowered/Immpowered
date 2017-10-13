@@ -1,11 +1,9 @@
 #splash {
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url('background.png');
-    background-size: 100%;
+    background-size: 120%;
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: fixed;
-    height: 2000px;
-    width: 100%;
     display: flex;
     align-content: center;
     align-items: center;
