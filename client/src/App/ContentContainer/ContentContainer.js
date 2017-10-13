@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import { observer, Provider } from 'mobx-react';
-
+import { observer, inject } from 'mobx-react';
 import './ContentContainer.css';
-import ContentContainerStore from './ContentContainer.store';
 import Landing from './Landing/Landing';
 import PickBackground from './PickBackground/PickBackground';
 import ResultPage from './ResultPage/ResultPage';
 
-const store = new ContentContainerStore();
-
+@inject('store')
 @observer
 class ContentContainer extends Component {
     render() {
@@ -18,11 +15,9 @@ class ContentContainer extends Component {
             "results": <ResultPage />
         }
         return (
-            <Provider store={store}>
-                <div id="splash">
-                    { component_map[store.content] }
-                </div>
-            </Provider>
+            <div id="splash">
+                {component_map[this.props.store.content]}
+            </div>
         );
     }
 }

@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 import logo from '../logo.svg';
 import './TopNav.css';
 
+@inject('store')
 @observer
 class TopNav extends Component {
+  onClick = (event) => {
+    event.target.disable()
+    this.props.store.change_language()
+  }
   render() {
     const links = ['About', 'Favorite', 'FAQ', 'Contact'];
 
@@ -13,6 +18,7 @@ class TopNav extends Component {
         <img id="logo" src={logo} />
         <div className="nav-container">
           <ul className="nav-menu">
+            <li key="language"><a onClick={this.onClick}>{this.props.store.language == 'English' ? 'Español': 'English'}</a></li>
             {links.map(function(name, index){
               return <li key={name} ><a href="/">{ name }</a></li>
             })}

@@ -18,7 +18,6 @@ class ResultPage extends Component {
     	this.props.store.filter_results()
     }
 	render() { 
-		console.log(this.props.store.displayed_results)
 		return (
 			<div className="result-page">
 				<div className="filterbox">
