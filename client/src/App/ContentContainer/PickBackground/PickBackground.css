@@ -10,16 +10,23 @@
 	margin-bottom: 20px;
 }
 
-select {
-    font-size: 16px;
-    border-radius: 0;
-    border: none;
-    background: white;
-    width: 125%;
-    overflow: hidden;
-    padding-top: 15px;
-    height: 45px;
-    text-indent: 10px;
-    color: #;
-    -webkit-appearance: none;
+.Select-control {
+    width: 120%;
+    border-radius: none;
+}
+
+.Select-arrow-zone {
+	background-color:#3FE0CD;
+}
+
+.Select-menu-outer {
+	width: 120%;
+}
+
+.Select-arrow {
+	border-color:white transparent transparent;
+}
+
+body {
+	margin: 0;
 }

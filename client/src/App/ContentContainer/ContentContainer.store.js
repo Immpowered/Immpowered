@@ -4,7 +4,12 @@ export default class ContentContainerStore {
   @observable content = 'landing';
 
   @action start() {
+  	console.log("STARTING")
     this.content = 'background';
-    console.log("STARTED");
+  }
+
+  @action choose_background() {
+  	console.log("I AM GETTIN MY RESULTSSSSS")
+  	this.content = 'results';
   }
 }

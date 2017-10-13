@@ -1,0 +1,21 @@
+.result-page{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.filterbox .card {
+	height: 300%;
+	width: 300px;
+	margin-right: 100px;
+	opacity: 0.9;
+}
+.card {
+	background-color: white;
+	box-shadow: 4px;
+	font: 'Roboto' 16px;
+	padding: 10px;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}

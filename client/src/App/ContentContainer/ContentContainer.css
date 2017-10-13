@@ -3,6 +3,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center top;
+    background-attachment: fixed;
     height: 2000px;
     width: 100%;
     display: flex;

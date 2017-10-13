@@ -5,6 +5,7 @@ import './ContentContainer.css';
 import ContentContainerStore from './ContentContainer.store';
 import Landing from './Landing/Landing';
 import PickBackground from './PickBackground/PickBackground';
+import ResultPage from './ResultPage/ResultPage';
 
 const store = new ContentContainerStore();
 
@@ -13,7 +14,8 @@ class ContentContainer extends Component {
     render() {
         const component_map = {
             "landing": <Landing />,
-            "background": <PickBackground />
+            "background": <PickBackground />,
+            "results": <ResultPage />
         }
         return (
             <Provider store={store}>
