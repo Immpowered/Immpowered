@@ -1,31 +1,21 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
-import logo from '../logo.svg';
-import './TopNav.css';
+import AppBar from 'material-ui/AppBar';
+import FlatButton from 'material-ui/FlatButton';
 
 @inject('store')
 @observer
-class TopNav extends Component {
-  onClick = (event) => {
-    this.props.store.change_language()
-  }
+class App extends Component {
   render() {
-    const links = ['About', 'Favorite', 'FAQ', 'Contact'];
-
     return (
-      <div className="top-nav">
-        <img id="logo" src={logo} />
-        <div className="nav-container">
-          <ul className="nav-menu">
-            <li key="language"><a onClick={this.onClick}>{this.props.store.language == 'English' ? 'Español': 'English'}</a></li>
-            {links.map(function(name, index){
-              return <li key={name} ><a href="/">{ name }</a></li>
-            })}
-          </ul>
-        </div>
-      </div>
+            <AppBar 
+                title="IMMPOWERED" 
+                onLeftIconButtonTouchTap={this.props.store.toggle_drawer}
+                iconElementRight={<FlatButton label="Login" />}
+                style={{ position: "fixed" }}
+            />
     );
   }
 }
 
-export default TopNav;
+export default App;
