@@ -18,7 +18,7 @@ class Landing extends Component {
 
         return (
             <div id="landing">
-                <img className="welcome" src={welcome} />
+                <img alt="Welcome to Immpowered" className="welcome" src={welcome} />
                 <FlatButton className="start-button" style={button_style} onClick={this.onClick}>start</FlatButton>
             </div>
         );

@@ -5,11 +5,16 @@ class AppStore {
     'open': false
   }
   @observable content = 'landing';
+  @observable career_interest = '';
+
   @action start = () =>{
-    console.log('STARTING')
+    this.content = 'questions'
   }
   @action toggle_drawer = () =>{
     this.drawer.open = !this.drawer.open
+  }
+  @action set_career = (value) => {
+    this.career_interest = value
   }
 }
 
