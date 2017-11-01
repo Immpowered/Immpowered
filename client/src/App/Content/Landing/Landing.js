@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
-import welcome from './welcome.svg';
 import FlatButton from 'material-ui/FlatButton';
 import './Landing.css';
 
@@ -18,8 +17,10 @@ class Landing extends Component {
 
         return (
             <div id="landing">
-                <img alt="Welcome to Immpowered" className="welcome" src={welcome} />
+                <div id="splash-text">WE<br></br>GUIDE<br></br>YOU</div>
                 <FlatButton className="start-button" style={button_style} onClick={this.onClick}>start</FlatButton>
+                <div id="logo">IMMPOWERED</div>
+                <div id="subtext">The Guide to Help NYC Immigrants</div>
             </div>
         );
     }

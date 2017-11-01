@@ -9,10 +9,9 @@ class App extends Component {
   render() {
     return (
             <AppBar 
-                title="IMMPOWERED" 
                 onLeftIconButtonTouchTap={this.props.store.toggle_drawer}
-                iconElementRight={<FlatButton label="Login" />}
-                style={{ position: "fixed" }}
+                iconElementRight={<FlatButton label="Español" />}
+                style={{ position: "fixed" , background: "none", border:"none"}}
             />
     );
   }
