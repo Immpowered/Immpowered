@@ -1,4 +1,4 @@
-#questions {
+.questions {
     display: flex;
     align-content: center;
     align-items: center;
@@ -6,3 +6,4 @@
     flex-direction: column;
     height: 50vw;
 }
+
