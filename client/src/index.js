@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App/App';
 import registerServiceWorker from './registerServiceWorker';
-import { cyan700, pinkA200, grey100, grey300, grey400, grey500, grey900,
+import { pinkA200, grey100, grey300, grey400, grey500, grey900,
     white, teal400, orange300} from 'material-ui/styles/colors';
 import './index.css';
 
