@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import Landing from './Landing/Landing';
 import Questions from './Questions/Questions';
+import Results from './Results/Results';
 import './Content.css';
 
 @inject('store')
@@ -10,7 +11,8 @@ class Content extends Component {
     render() {
         const component_map = {
             "landing": <Landing />,
-            'questions': <Questions />
+            "questions": <Questions />,
+            "results": <Results />
         }
         return (
             <div id="splash">

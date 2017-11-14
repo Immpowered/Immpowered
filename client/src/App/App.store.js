@@ -10,6 +10,11 @@ class AppStore {
   @action start = () =>{
     this.content = 'questions'
   }
+
+  @action get_results = () =>{
+    this.content = 'results'
+  }
+
   @action toggle_drawer = () =>{
     this.drawer.open = !this.drawer.open
   }
