@@ -5,7 +5,6 @@ class AppStore {
     'open': false
   }
   @observable content = 'landing';
-  @observable career_interest = '';
 
   @action start = () =>{
     this.content = 'questions'
