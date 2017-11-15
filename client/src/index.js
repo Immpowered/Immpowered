@@ -25,6 +25,13 @@ const muiTheme = getMuiTheme({
     appBar: {
         height: 50,
     },
+    raisedButton: {
+        primaryTextColor: white
+    },
+    card: {
+        titleColor: orange300
+    }
+
 });
 
 ReactDOM.render(

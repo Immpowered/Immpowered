@@ -18,7 +18,6 @@ export default class Questions extends Component {
         const card_style = {
             width: '600px',
             transitionDuration: '0.3s',
-            height: '700px',
             padding: '26px'
         }
         const radio_style = {
@@ -29,7 +28,7 @@ export default class Questions extends Component {
                 <Card style={card_style}>
                     <CardTitle title="English Level" style={{padding: '10px 0'}} />
                     <div className="question">
-                        <label>Here is a question with some text to make it less empty</label>
+                        <label>Do you need help improving your English?</label>
                         <RadioButtonGroup name="shipSpeed" defaultSelected="not_light">
                             <RadioButton
                                 value="light"
