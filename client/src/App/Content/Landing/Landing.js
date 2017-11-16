@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import FlatButton from 'material-ui/FlatButton';
+import { Card } from 'material-ui/Card';
 import './Landing.css';
 
 @inject("store")
@@ -20,6 +21,12 @@ class Landing extends Component {
             padding: 'none',
             margin: 'none'
         };
+
+        const card_style = {
+            width: '600px',
+            transitionDuration: '0.3s',
+            padding: '26px'
+        }
 
         return (
             <div id="landing">
@@ -57,8 +64,12 @@ class Landing extends Component {
                         GET IMMPOWERED
                     </FlatButton>   
                 </div>
-                <div id="fold"></div>
-
+                <div id="fold">
+                    <Card style={card_style}>
+                        <h1>something</h1>
+                        
+                    </Card>
+                </div>
             </div>
         );
     }

@@ -47,4 +47,8 @@
 #fold{
 	background-color:grey;
 	height: 100vw;
+	display: flex;
+	justify-content: center;
+	margin: 60px;
+
 }
