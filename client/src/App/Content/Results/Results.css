@@ -16,3 +16,16 @@
 .results p {
     padding: 10px;
 }
+
+.slider {
+    display: flex;
+    flex-direction: row;
+}
+
+.slide {
+    opacity: 0.1
+}
+
+.selected {
+    opacity: 1
+}
