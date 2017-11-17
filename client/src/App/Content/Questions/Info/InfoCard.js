@@ -2,7 +2,7 @@ import { Card, CardTitle } from 'material-ui/Card';
 import React, { Component } from 'react';
 // import InfoStore from '../info.Store';
 
-import { teal500, yellow700, purple500, orange500, brown400, grey500 } from 'material-ui/styles/colors';
+import { teal500, yellow700, purple500, orange500, brown400 } from 'material-ui/styles/colors';
 import QuestionStore from '../Questions.Store';
 import './InfoCard.css';
 
@@ -12,7 +12,6 @@ export default class InfoCard extends Component {
         let curr_index = QuestionStore.question_index
         let color = color_map[curr_index]
         return {
-            padding: 12,
             backgroundColor: color,
             color: 'white',
 		    margin: '20px',
@@ -21,9 +20,6 @@ export default class InfoCard extends Component {
 		    transitionDuration: '0.3s',
 		    padding: '26px',
         }
-    }
-    card: {
-        titleColor: orange300
     }
     render() {
 	    const card_title_style = {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { observer, inject } from 'mobx-react';
+import { observer } from 'mobx-react';
 import { Card, CardTitle, CardText, CardActions } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
@@ -27,7 +27,11 @@ export default class Results extends Component {
     }
     render() {
         return (
-            <Carousel className="carousel" centerMode={true} showArrows={true} infiniteLoop={true} useKeyboardArrows={true}>
+            <Carousel 
+                className="carousel" 
+                centerMode={true} 
+                showArrows={false} 
+                useKeyboardArrows={true}>
                 {ResultStore.current_results.map(this.build_card)}
             </Carousel>
         );

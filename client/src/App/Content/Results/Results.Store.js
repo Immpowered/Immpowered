@@ -1,5 +1,4 @@
 import { observable, action, computed } from "mobx";
-import QuestionStore from '../Questions/Questions.Store';
 import data from './data.json';
 
 class ResultsStore {
@@ -19,7 +18,7 @@ class ResultsStore {
         window.derp = this.potential_results
 
         return this.potential_results.filter((result)=>{
-            return tag_to_state[result['Tag']] == this.current_state
+            return tag_to_state[result['Tag']] === this.current_state
         })
     }
 

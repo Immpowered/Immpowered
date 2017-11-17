@@ -12,7 +12,7 @@ class App extends Component {
     return (
             <AppBar 
                 onLeftIconButtonTouchTap={this.props.store.toggle_drawer}
-                title={<img src={logo} />}
+                title={<img src={logo} alt="IMMPOWERED"/>}
                 iconElementRight={<FlatButton label="Español" />}
                 style={{ position: "fixed" , background: "white", border:"none"}}
             />

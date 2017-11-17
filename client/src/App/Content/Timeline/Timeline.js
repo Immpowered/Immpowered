@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { observer, inject } from 'mobx-react';
+import { observer } from 'mobx-react';
 import './Timeline.css';
 
 import { teal500, yellow700, purple500, orange500, brown400, grey500 } from 'material-ui/styles/colors';
@@ -17,7 +17,7 @@ import ResultStore from '../Results/Results.Store';
 export default class Timeline extends Component {
     set_index = (num) => {
         return () =>{
-            if (AppStore.content == 'questions'){
+            if (AppStore.content === 'questions'){
                 QuestionStore.question_index = num
             } else {
                 ResultStore.state_index = num
@@ -27,8 +27,8 @@ export default class Timeline extends Component {
     
     get_icon_style = (index) => {
         const color_map = [teal500, yellow700, purple500, orange500, brown400]
-        let curr_index = (AppStore.content == 'questions') ? QuestionStore.question_index : ResultStore.state_index
-        let color = (index == curr_index) ?  color_map[index] : grey500
+        let curr_index = (AppStore.content === 'questions') ? QuestionStore.question_index : ResultStore.state_index
+        let color = (index === curr_index) ?  color_map[index] : grey500
         return {
             width: 48,
             height: 48,
