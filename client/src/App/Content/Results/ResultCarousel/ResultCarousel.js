@@ -14,8 +14,10 @@ export default class Results extends Component {
             <Carousel 
                 className="carousel" 
                 centerMode={true} 
-                showArrows={false} 
+                showArrows={true} 
                 showThumbs={false}
+                showIndicators={false}
+                showStatus={false}
                 useKeyboardArrows={true}>
                 {ResultStore.current_results.map((obj)=>{
                     return <ResultCard 

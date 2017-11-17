@@ -12,16 +12,14 @@ export default class ResultCard extends Component {
         console.log("I AM RENDERING: ", this.props)
         const card_style = {
                 transitionDuration: '0.3s',
-                height: '100%',
-                width: '80%'
+                height: '100%'
             }
         return (          
             <Card style={card_style}>
                 <CardTitle title={this.props.name} subtitle={this.props.url} />
                 <CardText>{this.props.description}</CardText>
                 <CardActions>
-                    <FlatButton label="Prev" primary={true} onClick={this.props.prev_fn} />
-                    <FlatButton label="Next" primary={true} onClick={this.props.next_fn} />
+                    <FlatButton label="Visit Website" primary={true} onClick={this.props.prev_fn} />
                 </CardActions>
             </Card>
         );
