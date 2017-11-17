@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
-import { Card, CardTitle, CardText, CardActions } from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
 import Timeline from '../Timeline/Timeline';
 import './Results.css';
-import ResultStore from './Results.Store';
-import { Carousel } from 'react-responsive-carousel';
+
+import ResultCarousel from './ResultCarousel/ResultCarousel';
 
 
 @inject("store")
@@ -22,32 +20,7 @@ export default class Results extends Component {
         return (
             <div className="results">
                 <Timeline />
-                <Carousel className="carousel" centerMode={true} showArrows={true} infiniteLoop={true} useKeyboardArrows={true}>
-                    <Card style={card_style}>
-                        <CardTitle title="Brooklyn Workforce Innovations" subtitle={"BWI helps jobless and working poor New Yorkers establish careers."} />
-                        <CardText>{subtext}</CardText>
-                        <CardActions>
-                            <FlatButton label="Prev" primary={true} onClick={ResultStore.next_result} />
-                            <FlatButton label="Next" primary={true} onClick={ResultStore.next_result} />
-                        </CardActions>
-                    </Card>
-                    <Card style={card_style}>
-                        <CardTitle title="Brooklyn Workforce Innovations" subtitle={"BWI helps jobless and working poor New Yorkers establish careers."} />
-                        <CardText>{subtext}</CardText>
-                        <CardActions>
-                            <FlatButton label="Prev" primary={true} onClick={ResultStore.next_result} />
-                            <FlatButton label="Next" primary={true} onClick={ResultStore.next_result} />
-                        </CardActions>
-                    </Card>
-                    <Card style={card_style}>
-                        <CardTitle title="Brooklyn Workforce Innovations" subtitle={"BWI helps jobless and working poor New Yorkers establish careers."} />
-                        <CardText>{subtext}</CardText>
-                        <CardActions>
-                            <FlatButton label="Prev" primary={true} onClick={ResultStore.next_result} />
-                            <FlatButton label="Next" primary={true} onClick={ResultStore.next_result} />
-                        </CardActions>
-                    </Card>
-                </Carousel>
+                <ResultCarousel />
             </div>
         );
     }
