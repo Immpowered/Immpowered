@@ -29,3 +29,9 @@
 .selected {
     opacity: 1
 }
+
+.control-arrow {
+    color: black;
+    background-color: white;
+    font-size: '100px';
+}
