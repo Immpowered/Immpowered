@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import FlatButton from 'material-ui/FlatButton';
 import { Card } from 'material-ui/Card';
+import FontIcon from 'material-ui/FontIcon';
+import Avatar from 'material-ui/Avatar';
 import './Landing.css';
 
 @inject("store")
@@ -23,10 +25,16 @@ class Landing extends Component {
         };
 
         const card_style = {
-            width: '600px',
+            width: '50vw',
             transitionDuration: '0.3s',
-            padding: '26px'
+            padding: '26px',
+            display: 'flex',
+            justifyContent: 'between',
+            flexDirection: 'row',
+            alignItems: 'center'
         }
+
+        const testimony = "After I came to the U.S. I never thought I was going to work as a developer again. I could not imagine that there were so many NGOs in NYC willing to help immigrants. Thanks to Immpowered, I found the Robin Hood foundation."
 
         return (
             <div id="landing">
@@ -65,10 +73,22 @@ class Landing extends Component {
                     </FlatButton>   
                 </div>
                 <div id="fold">
-                    <Card style={card_style}>
-                        <h1>something</h1>
+                    <div className="testimony" style={card_style}>
+                        <div className="testimony-left">
+                            <Avatar
+                              icon={<FontIcon size={200} className="muidocs-icon-communication-voicemail" />}
+                              // color={blue300}
+                              // backgroundColor={indigo900}
+                              size={100}
+                              // style={style}
+                            />
+                        </div>
+                        <div className="testimony-right"><p>
+                            {testimony}
+                        </p></div>
                         
-                    </Card>
+                        
+                    </div>
                 </div>
             </div>
         );

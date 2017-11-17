@@ -1,13 +1,13 @@
 .questions {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    height: 50vw;
-    padding: 80px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	height: 50vw;
+	padding: 80px;
 }
 
 .question {
-    padding: 20px 0;
+	padding: 20px 0;
 }

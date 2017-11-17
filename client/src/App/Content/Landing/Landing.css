@@ -20,6 +20,7 @@
 	padding-top: 100px;
 	text-align: left;
 	margin: 0 150px;
+	font-size: 20px;
 }
 
 #splash-text h1{
@@ -49,6 +50,20 @@
 	height: 20vw;
 	display: flex;
 	justify-content: center;
-	margin: 60px;
 
 }
+
+.testimony {
+    background-color: white;
+    margin-top: 40px;
+}
+
+.testimony .testimony-left, .testimony .testimony-right{
+    padding: 20px;   
+} 
+
+.testimony .testimony-right{
+	font-size: 1.5em;
+
+}
+
