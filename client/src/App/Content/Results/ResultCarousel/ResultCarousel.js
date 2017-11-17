@@ -8,39 +8,27 @@ import { Carousel } from 'react-responsive-carousel';
 
 @observer
 export default class Results extends Component {
-    render() {
+    build_card = (result_obj) => {
         const card_style = {
             transitionDuration: '0.3s',
             height: '100%',
             width: '80%'
         }
-        const subtext = "Brooklyn Workforce Innovations has eight specialized training programs for different job sectors. You’ll get hands-on experience and job placement support for up to two years after graduation. Not sure where to look first? Answer these three questions and we can help you get started on your search for the right program."
+        return (
+            <Card style={card_style}>
+                <CardTitle title={result_obj["Name"]} subtitle={"HTTP://FILL_IN_LATER.COM"} />
+                <CardText>{result_obj["Description"]}</CardText>
+                <CardActions>
+                    <FlatButton label="Prev" primary={true} onClick={ResultStore.next_result} />
+                    <FlatButton label="Next" primary={true} onClick={ResultStore.next_result} />
+                </CardActions>
+            </Card>
+        )
+    }
+    render() {
         return (
             <Carousel className="carousel" centerMode={true} showArrows={true} infiniteLoop={true} useKeyboardArrows={true}>
-                <Card style={card_style}>
-                    <CardTitle title="Brooklyn Workforce Innovations" subtitle={"BWI helps jobless and working poor New Yorkers establish careers."} />
-                    <CardText>{subtext}</CardText>
-                    <CardActions>
-                        <FlatButton label="Prev" primary={true} onClick={ResultStore.next_result} />
-                        <FlatButton label="Next" primary={true} onClick={ResultStore.next_result} />
-                    </CardActions>
-                </Card>
-                <Card style={card_style}>
-                    <CardTitle title="Brooklyn Workforce Innovations" subtitle={"BWI helps jobless and working poor New Yorkers establish careers."} />
-                    <CardText>{subtext}</CardText>
-                    <CardActions>
-                        <FlatButton label="Prev" primary={true} onClick={ResultStore.next_result} />
-                        <FlatButton label="Next" primary={true} onClick={ResultStore.next_result} />
-                    </CardActions>
-                </Card>
-                <Card style={card_style}>
-                    <CardTitle title="Brooklyn Workforce Innovations" subtitle={"BWI helps jobless and working poor New Yorkers establish careers."} />
-                    <CardText>{subtext}</CardText>
-                    <CardActions>
-                        <FlatButton label="Prev" primary={true} onClick={ResultStore.next_result} />
-                        <FlatButton label="Next" primary={true} onClick={ResultStore.next_result} />
-                    </CardActions>
-                </Card>
+                {ResultStore.current_results.map(this.build_card)}
             </Carousel>
         );
     }

@@ -4,7 +4,7 @@ import data from './data.json';
 
 class ResultsStore {
     state = ['English Level', 'Career Interest', 'Resume Improvement', 'Build Network', 'Job Preparation']
-    potential_results = data
+    potential_results = JSON.parse(data)
     @observable state_index = 0
 
     @computed get current_results(){
@@ -15,8 +15,11 @@ class ResultsStore {
             'Job Placement': 'Job Preparation',
             'Resume': 'Resume Improvement'
         }
-        return this.current_results.filter((result)=>{
-            tag_to_state[result['Tag']] == this.current_state
+        
+        window.derp = this.potential_results
+
+        return this.potential_results.filter((result)=>{
+            return tag_to_state[result['Tag']] == this.current_state
         })
     }
 
