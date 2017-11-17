@@ -5,11 +5,11 @@ class QuestionStore {
     questions = ['English Level', 'Career Interest', 'Resume Improvement', 'Build Network', 'Job Preparation']
     @observable question_index = 0
     @observable answers = {
-        'English Level': true,
+        'English Level': false,
         'Career Interest': '',
-        'Resume Improvement': true,
-        'Build Network': true,
-        'Job Preparation': true
+        'Resume Improvement': false,
+        'Build Network': false,
+        'Job Preparation': false
     }
 
     @computed get current_question(){

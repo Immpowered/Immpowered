@@ -39,7 +39,7 @@ const component_map = {
         label="Do you want help creating or improving your resume?"
     />,
     'Build Network': <MultipleChoice
-        title="Build your Network" style={card_style}
+        title="Build Network" style={card_style}
         label="Do you want to connect with local professionals?"
     />,
     'Job Preparation': <MultipleChoice
