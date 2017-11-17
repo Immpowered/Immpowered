@@ -8,9 +8,9 @@ import InfoCard from './Info/InfoCard';
 import './Questions.css';
 
 const card_style = {
-    width: '500px',
+    width: '40vw',
     transitionDuration: '0.3s',
-    height: '500px',
+    height: '600px',
     padding: '26px',
     
 
@@ -18,8 +18,8 @@ const card_style = {
 
 const info_style = {
     margin: '20px',
-    width: '400px',
-    height: '500px',
+    width: '30vw',
+    height: '600px',
     transitionDuration: '0.3s',
     padding: '26px',
 }

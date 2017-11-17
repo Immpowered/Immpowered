@@ -47,12 +47,3 @@ li.selected {
     border-bottom: 8px solid transparent;
     content: '';
 }
-
-.testimony {
-    background-color: white;
-    margin-top: 40px;
-}
-
-.testimony .testimony-left, .testimony .testimony-right{
-    padding: 20px;   
-} 

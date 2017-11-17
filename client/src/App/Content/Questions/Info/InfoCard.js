@@ -8,17 +8,23 @@ import './InfoCard.css';
 
 export default class InfoCard extends Component {
     get_icon_style = () => {
-        const color_map = [teal500, yellow700, purple500, orange500, brown400]
+
+        // const color_map = [ '#1ca8a9', '#f4ad3d', '#57365d', '#f0642a', '#393e41']
+        const color_map = [ 'rgba(28,168,169,0.3)', 'rgba(244,173,69,0.3)', 'rgba(87,54,93,0.3)', 'rgba(240,100,42,0.3)', 'rgba(57,62,65,0.3)']
+        
         let curr_index = QuestionStore.question_index
         let color = color_map[curr_index]
         return {
             backgroundColor: color,
-            color: 'white',
+            color: 'dimgray',
+            fontSize: '1.5em',
+            lineHeight: '1.2em',
 		    margin: '20px',
-		    width: '400px',
-		    height: '500px',
+		    width: '30vw',
+		    height: '600px',
 		    transitionDuration: '0.3s',
 		    padding: '26px',
+            
         }
     }
     render() {
