@@ -28,7 +28,7 @@ export default class InfoCard extends Component {
 	    	fontSize: '500px'
 	    }    	
         return (
-            <Card style={this.get_icon_style()} titleColor="#fff">
+            <Card style={this.get_icon_style()} >
                 <CardTitle className="info-title" title={this.props.title} style={card_title_style} />
                 <div className="info">
                     <p>{this.props.text}</p>
