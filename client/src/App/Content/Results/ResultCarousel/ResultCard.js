@@ -8,20 +8,25 @@ import { Carousel } from 'react-responsive-carousel';
 
 @observer
 export default class ResultCard extends Component {
-    render() {
-        console.log("I AM RENDERING: ", this.props)
+    openInNewTab = (url) => {
+        return () => {
+            var win = window.open('http://'+url, '_blank');
+            win.focus();
+        }
+    }
+
+    render() {    
         const card_style = {
                 transitionDuration: '0.3s',
-                height: '100%',
-                width: '80%'
+                height: '100%'
             }
+
         return (          
             <Card style={card_style}>
                 <CardTitle title={this.props.name} subtitle={this.props.url} />
                 <CardText>{this.props.description}</CardText>
                 <CardActions>
-                    <FlatButton label="Prev" primary={true} onClick={this.props.prev_fn} />
-                    <FlatButton label="Next" primary={true} onClick={this.props.next_fn} />
+                    <FlatButton label="Visit Website" primary={true} onClick={this.openInNewTab(this.props.url)} />
                 </CardActions>
             </Card>
         );

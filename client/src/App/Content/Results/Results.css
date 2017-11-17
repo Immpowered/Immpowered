@@ -23,27 +23,53 @@
 }
 
 li.slide {
-    opacity: 0.1;
+    opacity: 0.01;
     min-width: 40%;
 }
 .carousel, .carousel-slider{
     width: 600px;
+    display: flex;
+    flex-direction: row;
 }
 
+.slider-wrapper{
+    width: 100%;
+}
 
 li.selected {
     opacity: 1
 }
 
 .control-arrow {
-    color: black;
     background-color: white;
-    font-size: '100px';
+    border: none;
 }
-
 .control-arrow:before {
     margin: 0 5px;
+    display: inline-block;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
     content: '';
+}
+
+.control-disabled {
+    opacity: 0;
+    cursor: inherit;
+    display: none;
+}
+
+.control-prev {
+    left: 0;
+}
+
+.control-prev:before {
+    border-right: 8px solid black;
+}
+
+.control-next {
+    right: 0px;
+}
+
+.control-next:before {
+    border-left: 8px solid black;
 }
