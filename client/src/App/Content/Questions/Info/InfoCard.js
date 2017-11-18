@@ -1,8 +1,5 @@
 import { Card, CardTitle } from 'material-ui/Card';
 import React, { Component } from 'react';
-// import InfoStore from '../info.Store';
-
-import { teal500, yellow700, purple500, orange500, brown400 } from 'material-ui/styles/colors';
 import QuestionStore from '../Questions.Store';
 import './InfoCard.css';
 

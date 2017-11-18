@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import FlatButton from 'material-ui/FlatButton';
-import { Card } from 'material-ui/Card';
 import FontIcon from 'material-ui/FontIcon';
 import Avatar from 'material-ui/Avatar';
 import './Landing.css';

@@ -1,11 +1,18 @@
 import { observable, action, computed } from "mobx";
 import data from './data.json';
+import QuestionStore from '../Questions/Questions.Store';
 
 class ResultsStore {
-    state = ['English Level', 'Career Interest', 'Resume Improvement', 'Build Network', 'Job Preparation']
-    potential_results = JSON.parse(data)
+    @computed get state(){
+        let all_states = ['English Level', 'Career Interest', 'Resume Improvement', 'Build Network', 'Job Preparation']
+        return all_states.filter((state)=>{ 
+            return QuestionStore.answers[state]
+        })
+    } 
+
     @observable state_index = 0
 
+    potential_results = JSON.parse(data)
     @computed get current_results(){
         const tag_to_state = {
             'English' : 'English Level',
@@ -14,9 +21,7 @@ class ResultsStore {
             'Job Placement': 'Job Preparation',
             'Resume': 'Resume Improvement'
         }
-        
-        window.derp = this.potential_results
-
+  
         return this.potential_results.filter((result)=>{
             return tag_to_state[result['Tag']] === this.current_state
         })

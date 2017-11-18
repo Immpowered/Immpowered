@@ -58,7 +58,7 @@ export default class Timeline extends Component {
         return (
             <ul className="timeline">
                 {timeline_components.map((component)=>{
-                    return <li key="0">{component}</li>
+                    return <li key={Math.floor(Math.random()*100)}>{component}</li>
                 })}
             </ul>
         );
