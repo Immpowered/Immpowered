@@ -29,7 +29,7 @@ const muiTheme = getMuiTheme({
         primaryTextColor: white
     },
     card: {
-        titleColor: orange300
+        titleColor: grey500
     }
 
 });

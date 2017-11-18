@@ -1,10 +1,10 @@
 import { Card, CardTitle } from 'material-ui/Card';
 import React, { Component } from 'react';
-// import InfoStore from '../info.Store';
 
 import { teal500, yellow700, purple500, orange500, brown400 } from 'material-ui/styles/colors';
 import QuestionStore from '../Questions.Store';
 import './InfoCard.css';
+import HelpOutline from 'material-ui/svg-icons/action/help-outline';
 
 export default class InfoCard extends Component {
     get_icon_style = () => {
@@ -34,8 +34,9 @@ export default class InfoCard extends Component {
 	    	fontSize: '500px'
 	    }    	
         return (
+
             <Card style={this.get_icon_style()} >
-                <CardTitle className="info-title" title={this.props.title} style={card_title_style} />
+                <HelpOutline style="fontsize: 48px;"/>
                 <div className="info">
                     <p>{this.props.text}</p>
 

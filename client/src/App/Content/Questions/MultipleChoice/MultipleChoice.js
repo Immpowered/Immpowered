@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import QuestionStore from '../Questions.Store';
+import './MultipleChoice.css';
 
 export default class MultipleChoice extends Component {
     set_answer = (event) => {
@@ -13,9 +14,10 @@ export default class MultipleChoice extends Component {
         const radio_style = {
             paddingTop: '10px'
         }
+
         return (
             <Card style={this.props.style}>
-                <CardTitle title={this.props.title} style={{ padding: '10px 0' }} />
+                <CardTitle title={this.props.title} titleStyle={{ padding: '10px 0', fontSize: '40px' }} />
                 <div className="question">
                     <label>{this.props.label}</label>
                     <RadioButtonGroup name="needEnglish" defaultSelected={true} onChange={this.set_answer}>
@@ -23,7 +25,7 @@ export default class MultipleChoice extends Component {
                         <RadioButton value={false} label="No" style={radio_style} />
                     </RadioButtonGroup>
                 </div>
-                <RaisedButton label="Submit" primary={true} onClick={QuestionStore.next_question} />
+                <RaisedButton className="raised-button" label="Submit" primary={true} onClick={QuestionStore.next_question} />
             </Card>
         )
     }

@@ -12,8 +12,7 @@ const card_style = {
     transitionDuration: '0.3s',
     height: '600px',
     padding: '26px',
-    
-
+    fontSize: '1.5em',
 }
 
 const info_style = {
